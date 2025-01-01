@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.Map;
 import org.testng.Assert;
 
-import static org.junit.Assert.assertTrue;
+
 
 public class PIMSteps {
 
@@ -87,12 +87,96 @@ public class PIMSteps {
                 "Employee with ID " + employeeId + " was not found in the list");
     }
 
+    @Then("user will be redirected to the employee details page.")
+    public void userWillBeRedirectedToTheEmployeeDetailsPage() {
+        // Use the isEmployeeDetailsPage method from the PIMPage class
+        PIMPage pimPage = new PIMPage(driver);
+        boolean isOnDetailsPage = pimPage.isEmployeeDetailsPage();
+
+        // Assert that the user is on the employee details page
+        Assert.assertTrue(isOnDetailsPage,
+                "User was not redirected to the employee details page.");
+    }
 
 
 
 
+    @Then("an error message should appear for the missing fields")
+    public void anErrorMessageShouldAppearForTheMissingFields() {
+        PIMPage pimPage = new PIMPage(driver);
+        Assert.assertTrue(
+                pimPage.isMessageDisplayed("Required"),
+                "Required error message not displayed as expected"
+        );
+    }
 
 
-//
+    @Then("a message indicating no record were found should be displayed")
+    public void aMessageIndicatingNoRecordWereFoundShouldBeDisplayed() {
+        PIMPage pimPage = new PIMPage(driver);
+        Assert.assertTrue(
+                pimPage.isMessageDisplayed("No Records Found"),
+                "No Records Found message not displayed as expected"
+        );
+    }
 
+    @When("I click on the Delete button")
+    public void iClickOnTheDeleteButton() {
+        PIMPage pimPage = new PIMPage(driver);
+        pimPage.clickDeleteButton();  // calling the function to click on the button
+    }
+
+    @And("I confirm the deletion")
+    public void iConfirmTheDeletion() {
+            PIMPage pimPage = new PIMPage(driver);
+            pimPage.confirmDelete();  // calling the function to click on the confirm
+    }
+
+
+    @And("I click on the Edit button")
+    public void iClickOnTheEditButton() {
+        PIMPage pimPage = new PIMPage(driver);
+        pimPage.clickEditButton();
+    }
+    private Map<String, String> updatedEmployeeDetails; // Global variable
+    @When("I enter updated  employee's details:")
+    public void enterUpdatedEmployeeDetails(DataTable updatedemployeeData) {
+        List<Map<String, String>> data = updatedemployeeData.asMaps(String.class, String.class);
+        Map<String, String> UpdatedEmployeeDetails = data.get(0);
+
+        updatedEmployeeDetails = data.get(0);
+
+        PIMPage pimPage = new PIMPage(driver);
+        pimPage.enterUpdatedEmployeeDetails(
+                UpdatedEmployeeDetails.get("firstName"),
+                UpdatedEmployeeDetails.get("middleName"),
+                UpdatedEmployeeDetails.get("lastName")
+
+        );
+    }
+
+
+    @Then("the employee details should be updated successfully")
+    public void verifyEmployeeDetailsUpdated() {
+        try {
+            // Make sure we have the details
+            if (updatedEmployeeDetails == null) {
+                throw new AssertionError("No employee details were provided for verification");
+            }
+
+            PIMPage pimPage = new PIMPage(driver);
+
+            boolean isUpdated = pimPage.isEmployeeDetailsUpdated(
+                    updatedEmployeeDetails.get("firstName"),
+                    updatedEmployeeDetails.get("middleName"),
+                    updatedEmployeeDetails.get("lastName")
+            );
+
+            // TestNG assertion syntax: Assert.assertTrue(condition, message)
+            Assert.assertTrue(isUpdated, "Updated employee details were not found on the page");
+
+        } catch (Exception e) {
+            Assert.fail("Error verifying employee details: " + e.getMessage());
+        }
+    }
 }
