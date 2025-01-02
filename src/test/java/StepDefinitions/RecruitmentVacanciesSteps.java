@@ -88,5 +88,27 @@ public class RecruitmentVacanciesSteps {
         }
     }
 
+    @When("User applies filters with criteria that have no matching records")
+    public void userAppliesFiltersWithNoMatchingCriteria() {
+        recruitmentVacanciesPage.selectJobTitle("ABC"); // Replace with invalid value
+        recruitmentVacanciesPage.selectVacancy("ABC"); // Replace with invalid value
+        recruitmentVacanciesPage.selectHiringManager("ABC"); // Replace with invalid value
+        recruitmentVacanciesPage.selectStatus("Inactive"); // Replace with invalid value
+        recruitmentVacanciesPage.clickSearchButton();
+    }
+
+    @Then("No records should be displayed")
+    public void noRecordsShouldBeDisplayed() {
+        List<WebElement> results = driver.findElements(By.cssSelector(".result-row"));
+        assertTrue(results.isEmpty(), "Results are displayed when none were expected.");
+    }
+
+
+    @Then("The test environment is cleaned up")
+    public void cleanUpEnvironment() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
 }

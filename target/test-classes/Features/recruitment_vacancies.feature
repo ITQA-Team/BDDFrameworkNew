@@ -8,6 +8,7 @@ Feature: Recruitment Vacancies Management
     And User selects "Active" from the Status dropdown
     And User clicks the Search button
     Then The results should display the vacancies matching the criteria
+    And The test environment is cleaned up
 
   Scenario: Search vacancies with selected criteria
     Given User is on the Recruitment Vacancies page
@@ -17,3 +18,10 @@ Feature: Recruitment Vacancies Management
     And User selects "Active" from the Status dropdown
     And User clicks the Search button
     Then The results should display vacancies that match all the selected criteria
+    And The test environment is cleaned up
+
+  Scenario: Applying filters that do not match any records
+    Given User is on the Recruitment Vacancies page
+    When User applies filters with criteria that have no matching records
+    Then No records should be displayed
+    And The test environment is cleaned up
