@@ -102,7 +102,33 @@ public class RecruitmentVacanciesSteps {
         List<WebElement> results = driver.findElements(By.cssSelector(".result-row"));
         assertTrue(results.isEmpty(), "Results are displayed when none were expected.");
     }
+    @When("User clicks the Reset button")
+    public void userClicksResetButton() {
+        recruitmentVacanciesPage.clickResetButton();
+    }
 
+    @Then("All records should be displayed")
+    public void allRecordsShouldBeDisplayed() {
+        List<WebElement> results = driver.findElements(By.cssSelector(".result-row"));
+        assertFalse(results.isEmpty(), "Records are not displayed after reset.");
+    }
+
+    @Then("All dropdowns should display --Select--")
+    public void allDropdownsShouldDisplaySelect() {
+        List<WebElement> results = driver.findElements(By.cssSelector(".result-row"));
+        for (WebElement result : results) {
+            String jobTitle = result.findElement(By.cssSelector(".job-title")).getText();
+            String vacancy = result.findElement(By.cssSelector(".vacancy")).getText();
+            String hiringManager = result.findElement(By.cssSelector(".hiring-manager")).getText();
+            String status = result.findElement(By.cssSelector(".status")).getText();
+            assertEquals(recruitmentVacanciesPage.getJobTitleDropdownSelectedOption(), "-- Select --", jobTitle);
+            assertEquals(recruitmentVacanciesPage.getVacancyDropdownSelectedOption(), "-- Select --", vacancy);
+            assertEquals(recruitmentVacanciesPage.getHiringManagerDropdownSelectedOption(), "-- Select --", hiringManager);
+            assertEquals(recruitmentVacanciesPage.getStatusDropdownSelectedOption(), "-- Select --", status);
+
+        }
+
+    }
 
     @Then("The test environment is cleaned up")
     public void cleanUpEnvironment() {

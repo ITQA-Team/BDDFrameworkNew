@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class RecruitmentVacanciesPage {
     WebDriver driver;
@@ -25,6 +26,9 @@ public class RecruitmentVacanciesPage {
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]")
     private WebElement searchButton;
+
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[1]")
+    private WebElement resetButton;
 
 //    private By jobDropdown = By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]");
     // Constructor
@@ -64,6 +68,27 @@ public class RecruitmentVacanciesPage {
             System.out.println("Element click intercepted. Using JavaScript click.");
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton);
         }
+    }
+    public void clickResetButton() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(resetButton));
+        resetButton.click();
+    }
+
+    public String getJobTitleDropdownSelectedOption() {
+        return jobTitleDropdown.getAttribute("value");
+    }
+
+    public String getVacancyDropdownSelectedOption() {
+        return vacancyDropdown.getAttribute("value");
+    }
+
+    public String getHiringManagerDropdownSelectedOption() {
+        return hiringManagerDropdown.getAttribute("value");
+    }
+
+    public String getStatusDropdownSelectedOption() {
+        return statusDropdown.getAttribute("value");
     }
 
 }

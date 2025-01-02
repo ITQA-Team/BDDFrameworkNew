@@ -25,3 +25,10 @@ Feature: Recruitment Vacancies Management
     When User applies filters with criteria that have no matching records
     Then No records should be displayed
     And The test environment is cleaned up
+
+  Scenario: Reset filters to view all records
+    Given User is on the Recruitment Vacancies page
+    When User clicks the Reset button
+    And All dropdowns should display --Select--
+    And The test environment is cleaned up
+
