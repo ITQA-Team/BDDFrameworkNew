@@ -3,9 +3,10 @@ package StepDefinitions;
 import io.cucumber.java.en.*;
 
 import static org.junit.Assert.assertEquals;
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +30,7 @@ public class RecruitmentVacanciesSteps {
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        // Log in if redirected to login page
+
         WebElement usernameField = driver.findElement(By.name("username"));
         WebElement passwordField = driver.findElement(By.name("password"));
         WebElement loginButton = driver.findElement(By.cssSelector(".orangehrm-login-button"));
@@ -70,4 +71,22 @@ public class RecruitmentVacanciesSteps {
     public void resultsShouldDisplayVacanciesMatchingCriteria() {
         // Add assertions to verify that the displayed vacancies match the search criteria
     }
+    @Then("The results should display vacancies that match all the selected criteria")
+    public void the_results_should_display_vacancies_that_match_all_the_selected_criteria() {
+        List<WebElement> results = driver.findElements(By.cssSelector(".result-row"));
+
+        for (WebElement result : results) {
+            String jobTitle = result.findElement(By.cssSelector(".job-title")).getText();
+            String vacancy = result.findElement(By.cssSelector(".vacancy")).getText();
+            String hiringManager = result.findElement(By.cssSelector(".hiring-manager")).getText();
+            String status = result.findElement(By.cssSelector(".status")).getText();
+
+            assertTrue(jobTitle.equals("Account Assistant"), "Job Title should match the selected value");
+            assertTrue(vacancy.equals("Vacancy Name"), "Vacancy should match the selected value");
+            assertTrue(hiringManager.equals("John Doe"), "Hiring Manager should match the selected value");
+            assertTrue(status.equals("Active"), "Status should match the selected value");
+        }
+    }
+
+
 }
