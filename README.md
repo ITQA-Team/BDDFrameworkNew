@@ -1,3 +1,3 @@
 # BDDFrameworkNew
 
-# Technologies: Cucumber + Selenium + RestAssured + TestNg
+**Technologies** : Cucumber + Selenium + RestAssured + TestNg
