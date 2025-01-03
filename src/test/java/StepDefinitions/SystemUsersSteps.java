@@ -50,6 +50,7 @@ public class SystemUsersSteps {
 
     @When("User clicks the search button for System Users")
     public void userClicksSearchButtonForSystemUsers() {
+
         systemUsersPage.clickSearchButtonForSystemUsers();
     }
 
