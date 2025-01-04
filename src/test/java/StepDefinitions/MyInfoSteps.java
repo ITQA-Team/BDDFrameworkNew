@@ -5,18 +5,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import Pages.LoginPage;
+import Pages.MyInfoPage;
+
 import java.time.Duration;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-public class LoginSteps {
+public class MyInfoSteps {
 
     WebDriver driver;
-    LoginPage loginPage;
+    MyInfoPage myInfoPage;
 
-    @Given("I am on the login page")
-    public void i_am_on_the_login_page() {
+    @Given("I am on the personal details page")
+    public void i_am_on_the_personal_details_page() {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -28,30 +29,30 @@ public class LoginSteps {
         usernameField.sendKeys("Admin"); // Replace with valid username
         passwordField.sendKeys("admin123"); // Replace with valid password
         loginButton.click();
-        //modification
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/7");
-
+        myInfoPage = new MyInfoPage(driver);
     }
 
-    @When("I enter username {string}")
-    public void i_enter_username(String username) {
-        loginPage.enterUsername(username);
+    @When("I enter first name {string}")
+    public void i_enter_first_name(String firstName) {
+        myInfoPage.enterFirstName(firstName);
     }
 
-    @When("I enter password {string}")
-    public void i_enter_password(String password) {
-        loginPage.enterPassword(password);
+    @When("I enter last name {string}")
+    public void i_enter_last_name(String lastName) {
+        myInfoPage.enterLastName(lastName);
     }
 
-    @When("I click on login button")
-    public void i_click_on_login_button() {
-        loginPage.clickLogin();
+    @When("I click on save button")
+    public void i_click_on_save_button() {
+        myInfoPage.clickSave();
     }
 
-    @Then("I should be redirected to the homepage")
-    public void i_should_be_redirected_to_the_homepage() {
-        String expectedURL = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
-        assertEquals(expectedURL, driver.getCurrentUrl());
+    @Then("The first name and last name should be updated successfully")
+    public void the_first_name_and_last_name_should_be_updated_successfully() {
+        String expectedFirstName = "John";
+        String expectedLastName = "Doe";
+        assertTrue(myInfoPage.verifyUpdatedDetails(expectedFirstName, expectedLastName));
         driver.quit();
     }
 }
