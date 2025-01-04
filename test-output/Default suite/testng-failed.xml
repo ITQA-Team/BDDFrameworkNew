@@ -6,7 +6,7 @@
       <class name="TestRunner.CucumberTestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="4 5 10"/>
+          <include name="runScenario" invocation-numbers="1 2 4 5 21 7 13"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- TestRunner.CucumberTestRunner -->
