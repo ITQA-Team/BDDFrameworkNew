@@ -10,7 +10,7 @@ Feature:  Employee Reviews Management
 
   Scenario: Search for an existing performance review (Happy Path)
     Given User is on the Employee Reviews page
-   When  User selects "IT Manager" from the Job Title dropdown
+   When  User select "IT Manager" from the Job Title dropdown
  And User clicks the Search button for Employee Reviews
     Then System displays the search results for Employee Reviews
 

@@ -48,7 +48,7 @@ public class PerformanceSteps {
     }
 
 
-    @When("User selects {string} from the Job Title dropdown")
+    @When("User select {string} from the Job Title dropdown")
     public void userSelectsJobTitleFromTheDropdown(String jobTitle) {
         performancePage.selectJobTitle(jobTitle);
     }

@@ -1,27 +1,368 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="19" passed="16" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-01T11:53:34 IST" name="Default suite" finished-at="2025-01-01T11:54:07 IST" duration-ms="33318">
+  <suite started-at="2025-01-03T18:13:30 IST" name="Default suite" finished-at="2025-01-03T18:23:09 IST" duration-ms="578344">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-01-01T11:53:34 IST" name="Default test" finished-at="2025-01-01T11:54:07 IST" duration-ms="33318">
+    <test started-at="2025-01-03T18:13:30 IST" name="Default test" finished-at="2025-01-03T18:23:09 IST" duration-ms="578344">
       <class name="TestRunner.CucumberTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-01T11:53:34 IST" name="setUpClass" finished-at="2025-01-01T11:53:34 IST" duration-ms="377" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:13:30 IST" name="setUpClass" finished-at="2025-01-03T18:13:31 IST" duration-ms="419" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7da34b26]]>
+                <![CDATA[org.testng.TestRunner@56f84c9b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-01T11:53:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-01T11:53:42 IST" duration-ms="8315" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:13:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:13:51 IST" duration-ms="19956" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a new employee with filling all mandatory fields(Happy path)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:13:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:14:20 IST" duration-ms="29577" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a new employee with missing mandatory fields (Unhappy Path)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:14:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:14:58 IST" duration-ms="37286" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for an existing employee by employee ID(Happy Path)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:14:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:15:20 IST" duration-ms="22746" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for a non-existent employee by employee ID (Unhappy Path)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:15:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:15:43 IST" duration-ms="22769" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update an existing employee's details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM Module"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.205)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3921fa785a47306e8a6eefee7ea89bb8, clickElement {id=f.B98B87B052825B6D0692AF0F2D7A596B.d.EA698D4EE1365F710FFCF6BC37F634F3.e.1085}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\shakthi\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58613/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3921fa785a47306e8a6eefee7ea89bb8)] -> css selector: button.oxd-icon-button .bi-pencil-fill]
+Session ID: 3921fa785a47306e8a6eefee7ea89bb8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.205)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3921fa785a47306e8a6eefee7ea89bb8, clickElement {id=f.B98B87B052825B6D0692AF0F2D7A596B.d.EA698D4EE1365F710FFCF6BC37F634F3.e.1085}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\shakthi\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58613/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3921fa785a47306e8a6eefee7ea89bb8)] -> css selector: button.oxd-icon-button .bi-pencil-fill]
+Session ID: 3921fa785a47306e8a6eefee7ea89bb8
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at Pages.PIMPage.clickEditButton(PIMPage.java:155)
+at StepDefinitions.PIMSteps.iClickOnTheEditButton(PIMSteps.java:139)
+at ✽.I click on the Edit button(file:///C:/Users/shakthi/eclipse-workspace/BDDFrameworkNew/src/test/resources/Features/PIM.feature:53)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:15:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:16:12 IST" duration-ms="28435" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete an existing employee"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM Module"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[No Records Found message not displayed as expected expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: No Records Found message not displayed as expected expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at StepDefinitions.PIMSteps.aMessageIndicatingNoRecordWereFoundShouldBeDisplayed(PIMSteps.java:117)
+at ✽.a message indicating no record were found should be displayed(file:///C:/Users/shakthi/eclipse-workspace/BDDFrameworkNew/src/test/resources/Features/PIM.feature:79)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:16:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:16:46 IST" duration-ms="34391" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:16:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:17:08 IST" duration-ms="21798" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for an employee review by employee name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee Reviews Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:17:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:17:26 IST" duration-ms="18472" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for an existing performance review (Happy Path)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee Reviews Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:17:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:18:08 IST" duration-ms="41721" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for Performance Reviews by Review Status"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee Reviews Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:18:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:18:38 IST" duration-ms="30198" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Reset the search form"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee Reviews Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]"}
+  (Session info: chrome=131.0.6778.205)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [acd571856db812b51e917eec0bcf2451, findElement {value=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/div[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\shakthi\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58936}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58936/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: acd571856db812b51e917eec0bcf2451]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]"}
+  (Session info: chrome=131.0.6778.205)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [acd571856db812b51e917eec0bcf2451, findElement {value=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/div[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\shakthi\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58936}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58936/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: acd571856db812b51e917eec0bcf2451
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
+at Pages.RecruitmentVacanciesPage.selectJobTitle(RecruitmentVacanciesPage.java:43)
+at StepDefinitions.RecruitmentVacanciesSteps.userSelectsJobTitleFromTheDropdown(RecruitmentVacanciesSteps.java:47)
+at ✽.User selects "IT Manager" from the Job Title dropdown(file:///C:/Users/shakthi/eclipse-workspace/BDDFrameworkNew/src/test/resources/Features/performance.feature:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:18:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:18:58 IST" duration-ms="19921" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify vacancies search functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Recruitment Vacancies Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:18:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:20:02 IST" duration-ms="63633" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search vacancies with selected criteria"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Recruitment Vacancies Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:20:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:20:34 IST" duration-ms="32207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Applying filters that do not match any records"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Recruitment Vacancies Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:21:16 IST" duration-ms="41998" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Reset filters to view all records"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Recruitment Vacancies Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:21:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:21:31 IST" duration-ms="15148" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +378,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-01T11:53:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-01T11:53:49 IST" duration-ms="7039" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:21:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:21:47 IST" duration-ms="15714" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +394,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-01T11:53:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-01T11:53:59 IST" duration-ms="9311" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:21:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:22:32 IST" duration-ms="44729" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +410,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-01T11:53:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-01T11:54:07 IST" duration-ms="8151" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:22:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-03T18:23:09 IST" duration-ms="36971" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,7 +426,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-01T11:54:07 IST" name="tearDownClass" finished-at="2025-01-01T11:54:07 IST" duration-ms="23" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.CucumberTestRunner@6ca18a14]" started-at="2025-01-03T18:23:09 IST" name="tearDownClass" finished-at="2025-01-03T18:23:09 IST" duration-ms="40" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
